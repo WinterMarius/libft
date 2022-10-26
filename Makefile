@@ -1,5 +1,5 @@
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 
 sources = ft_atoi.c ft_isalnum.c ft_isdigit.c ft_memchr.c ft_memmove.c ft_putendl_fd.c \
@@ -18,16 +18,10 @@ bonusobjs = $(bonussources:.c=.o)
 all: $(NAME)
 
 $(NAME): $(objs)
-	ar rcs $(NAME) $(objs)
-
-$(objs): $(sources)
-	gcc -c $(FLAGS) $(sources)
+	ar -rcs $(NAME) $(objs)
 
 bonus: $(objs) $(bonusobjs)
-	ar rcs $(NAME) $(objs) $(bonusobjs)
-
-$(bonusobjs): $(bonussources)
-	gcc -c $(FLAGS) $(bonussources)
+	ar -rcs $(NAME) $(objs) $(bonusobjs)
 
 clean:
 	rm -f $(objs) $(bonusobjs)
@@ -37,3 +31,5 @@ fclean:
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re bonus
