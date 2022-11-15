@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mawinter <mawinter@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marius <marius@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 12:31:44 by mawinter          #+#    #+#             */
-/*   Updated: 2022/03/26 14:41:50 by mawinter         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:18:34 by marius           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	srclen;
 
 	i = 0;
+	if (!src || !dst)
+		return (0);
 	destlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
 	if (dstsize <= destlen)
