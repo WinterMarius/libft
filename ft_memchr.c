@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mawinter <mawinter@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marius <marius@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:48:33 by mawinter          #+#    #+#             */
-/*   Updated: 2022/03/25 18:09:37 by mawinter         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:20:09 by marius           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*ss;
 	size_t			i;
 
+	if (!s)
+		return (NULL);
 	cchar = (unsigned char)c;
 	ss = (unsigned char *)s;
 	i = 0;
