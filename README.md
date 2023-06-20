@@ -6,13 +6,9 @@ Libft is a project that rewrites a set of functions from the standard C library.
 
 The functions created in this project have the same prototypes and behaviors as their libc counterparts, with the only difference being their names, which are prefixed with `ft_` (e.g., strlen becomes `ft_strlen`).
 
-> Note: Some of the original function prototypes use the `restrict` qualifier, which is part of the c99 standard. This qualifier is not to be included in the recreated function prototypes, nor is the code to be compiled with the `-std=c99` flag.
-
 This repository is divided into two main parts:
 
 ### Part 1: Recoding a set of libc functions. 
-
-These functions do not require any external functions:
 
 - isalpha
 - isdigit
@@ -35,11 +31,6 @@ These functions do not require any external functions:
 - memcmp
 - strnstr
 - atoi
-
-And two functions that use `malloc()`:
-
-- calloc
-- strdup
 
 ### Part 2: Developing a set of functions that are either not included in the libc, or that exist but in a different form:
 
